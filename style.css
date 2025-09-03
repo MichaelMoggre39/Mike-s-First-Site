@@ -1,0 +1,226 @@
+/* Skip Link Accessibility Styles */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: 100;
+  background: #fff;
+  color: #ff1744;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: left 0.3s;
+}
+.skip-link:focus {
+  left: 16px;
+  top: 16px;
+  width: auto;
+  height: auto;
+  outline: 2px solid #ff1744;
+}
+/* Responsive Design */
+@media (max-width: 600px) {
+  .container {
+    padding: 10px;
+  }
+  .nav-list {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .profile-pic {
+    width: 80px;
+    height: 80px;
+  }
+  .card {
+    padding: 12px;
+  }
+}
+
+/* Loading Spinner */
+.spinner {
+  border: 4px solid #fff;
+  border-top: 4px solid #ff1744;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Error handling for images */
+img.profile-pic {
+  background: #222;
+}
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(135deg, #000 0%, #222 100%);
+  color: #fff;
+}
+
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.85);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.header {
+  text-align: center;
+  font-size: 2.5em;
+  letter-spacing: 2px;
+  color: #ff1744;
+  text-shadow: 2px 2px 8px #000;
+  margin-bottom: 10px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 30px;
+}
+
+.links a {
+  text-decoration: none;
+  color: #fff;
+  background: #ff1744;
+  font-size: 1.2em;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: 2px solid #fff;
+  transition: background 0.3s, color 0.3s, border 0.3s;
+}
+
+.links a:hover {
+  background: #fff;
+  color: #ff1744;
+  border: 2px solid #ff1744;
+  box-shadow: 0 4px 20px rgba(255, 23, 68, 0.2);
+}
+
+.card {
+  background: #1a1a1a;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(255, 23, 68, 0.15);
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.highlight {
+  color: #ff1744;
+  font-weight: bold;
+}
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 16px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  color: #fff;
+  font-size: 1em;
+  opacity: 0.7;
+}
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(135deg, #000 0%, #222 100%);
+  color: #fff;
+}
+
+.header {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 2.5em;
+  letter-spacing: 2px;
+  color: #ff1744; /* bright red */
+  text-shadow: 2px 2px 8px #000;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 30px;
+}
+
+.links a {
+  text-decoration: none;
+  color: #fff;
+  background: #ff1744;
+  font-size: 1.2em;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: 2px solid #fff;
+  transition: background 0.3s, color 0.3s, border 0.3s;
+}
+
+.links a:hover {
+  background: #fff;
+  color: #ff1744;
+  border: 2px solid #ff1744;
+  box-shadow: 0 4px 20px rgba(255, 23, 68, 0.2);
+  cursor: grab;
+}
+
+.profile-pic {
+  width: 140px;
+  height: 125px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  display: block;
+  margin: 0 auto 20px auto;
+}
+/* Accessibility: Focus styles for keyboard navigation */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+  outline: 2px solid #ff1744;
+  outline-offset: 2px;
+}
+
+/* Center main sections and constrain width */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+#about,
+#featured,
+#games,
+#contact {
+  text-align: center;
+  margin: 32px auto;
+}
