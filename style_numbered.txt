@@ -1,0 +1,283 @@
+1:/* Global box-sizing for predictable layout */
+2:*,
+3:*::before,
+4:*::after {
+5:  box-sizing: border-box;
+6:}
+7:
+8:/* Skip Link Accessibility Styles */
+9:.skip-link {
+10:  position: absolute;
+11:  left: -999px;
+12:  top: auto;
+13:  width: 1px;
+14:  height: 1px;
+15:  overflow: hidden;
+16:  z-index: 100;
+17:  background: #fff;
+18:  color: #ff1744;
+19:  padding: 8px 16px;
+20:  border-radius: 8px;
+21:  font-weight: bold;
+22:  transition: left 0.3s;
+23:}
+24:.skip-link:focus {
+25:  left: 16px;
+26:  top: 16px;
+27:  width: auto;
+28:  height: auto;
+29:  outline: 2px solid #ff1744;
+30:}
+31:/* Responsive Design */
+32:@media (max-width: 600px) {
+33:  .container {
+34:    padding: 10px;
+35:  }
+36:  .nav-list {
+37:    flex-direction: column;
+38:    gap: 10px;
+39:  }
+40:  .profile-pic {
+41:    width: 80px;
+42:    height: 80px;
+43:  }
+44:  .card {
+45:    padding: 12px;
+46:  }
+47:}
+48:
+49:/* Loading Spinner */
+50:.spinner {
+51:  border: 4px solid #fff;
+52:  border-top: 4px solid #ff1744;
+53:  border-radius: 50%;
+54:  width: 40px;
+55:  height: 40px;
+56:  animation: spin 1s linear infinite;
+57:  margin: 20px auto;
+58:}
+59:@keyframes spin {
+60:  0% {
+61:    transform: rotate(0deg);
+62:  }
+63:  100% {
+64:    transform: rotate(360deg);
+65:  }
+66:}
+67:
+68:/* Error handling for images */
+69:img.profile-pic {
+70:  background: #222;
+71:}
+72:
+73:/* Make media elements shrink to fit on small screens */
+74:img,
+75:iframe,
+76:video {
+77:  max-width: 100%;
+78:  height: auto;
+79:}
+80:body {
+81:  margin: 0;
+82:  font-family: "Segoe UI", Arial, sans-serif;
+83:  background: linear-gradient(135deg, #000 0%, #222 100%);
+84:  color: #fff;
+85:}
+86:
+87:.container {
+88:  max-width: 900px;
+89:  margin: 40px auto;
+90:  padding: 20px;
+91:  background: rgba(0, 0, 0, 0.85);
+92:  border-radius: 16px;
+93:  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+94:}
+95:
+96:.header {
+97:  text-align: center;
+98:  font-size: 2.5em;
+99:  letter-spacing: 2px;
+100:  color: #ff1744;
+101:  text-shadow: 2px 2px 8px #000;
+102:  margin-bottom: 10px;
+103:}
+104:
+105:nav {
+106:  display: flex;
+107:  justify-content: center;
+108:  margin-bottom: 30px;
+109:}
+110:
+111:.nav-list {
+112:  list-style: none;
+113:  padding: 0;
+114:  display: flex;
+115:  gap: 30px;
+116:}
+117:
+118:.links a {
+119:  text-decoration: none;
+120:  color: #fff;
+121:  background: #ff1744;
+122:  font-size: 1.2em;
+123:  padding: 10px 20px;
+124:  border-radius: 8px;
+125:  border: 2px solid #fff;
+126:  transition: background 0.3s, color 0.3s, border 0.3s;
+127:}
+128:
+129:.links a:hover {
+130:  background: #fff;
+131:  color: #ff1744;
+132:  border: 2px solid #ff1744;
+133:  box-shadow: 0 4px 20px rgba(255, 23, 68, 0.2);
+134:}
+135:
+136:.card {
+137:  background: #1a1a1a;
+138:  border-radius: 12px;
+139:  box-shadow: 0 2px 12px rgba(255, 23, 68, 0.15);
+140:  padding: 24px;
+141:  margin-bottom: 24px;
+142:}
+143:
+144:.highlight {
+145:  color: #ff1744;
+146:  font-weight: bold;
+147:}
+148:
+149:.video-container {
+150:  position: relative;
+151:  width: 100%;
+152:  /* 16:9 aspect ratio */
+153:  padding-bottom: 56.25%;
+154:  height: 0;
+155:  overflow: hidden;
+156:  margin-top: 16px;
+157:}
+158:
+159:.video-container iframe {
+160:  position: absolute;
+161:  top: 0;
+162:  left: 0;
+163:  width: 100%;
+164:  height: 100%;
+165:  border: 0;
+166:}
+167:
+168:footer {
+169:  text-align: center;
+170:  margin-top: 40px;
+171:  color: #fff;
+172:  font-size: 1em;
+173:  opacity: 0.7;
+174:}
+175:body {
+176:  margin: 0;
+177:  font-family: "Segoe UI", Arial, sans-serif;
+178:  background: linear-gradient(135deg, #000 0%, #222 100%);
+179:  color: #fff;
+180:}
+181:
+182:.header {
+183:  text-align: center;
+184:  margin-top: 40px;
+185:  font-size: 2.5em;
+186:  letter-spacing: 2px;
+187:  color: #ff1744; /* bright red */
+188:  text-shadow: 2px 2px 8px #000;
+189:}
+190:
+191:nav {
+192:  display: flex;
+193:  justify-content: center;
+194:  margin-top: 30px;
+195:}
+196:
+197:nav ul {
+198:  list-style: none;
+199:  padding: 0;
+200:  display: flex;
+201:  gap: 30px;
+202:}
+203:
+204:.links a {
+205:  text-decoration: none;
+206:  color: #fff;
+207:  background: #ff1744;
+208:  font-size: 1.2em;
+209:  padding: 10px 20px;
+210:  border-radius: 8px;
+211:  border: 2px solid #fff;
+212:  transition: background 0.3s, color 0.3s, border 0.3s;
+213:}
+214:
+215:.links a:hover {
+216:  background: #fff;
+217:  color: #ff1744;
+218:  border: 2px solid #ff1744;
+219:  box-shadow: 0 4px 20px rgba(255, 23, 68, 0.2);
+220:  cursor: grab;
+221:}
+222:
+223:.profile-pic {
+224:  width: 140px;
+225:  height: 125px;
+226:  object-fit: cover;
+227:  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+228:  display: block;
+229:  margin: 0 auto 20px auto;
+230:}
+231:/* Accessibility: Focus styles for keyboard navigation */
+232:a:focus,
+233:button:focus,
+234:input:focus,
+235:textarea:focus {
+236:  outline: 2px solid #ff1744;
+237:  outline-offset: 2px;
+238:}
+239:
+240:/* Center main sections and constrain width */
+241:main {
+242:  max-width: 900px;
+243:  margin: 0 auto;
+244:  padding: 0 16px;
+245:}
+246:
+247:#about,
+248:#featured,
+249:#games,
+250:#contact {
+251:  text-align: center;
+252:  margin: 32px auto;
+253:}
+254:
+255:/* Mobile tweaks */
+256:@media (max-width: 700px) {
+257:  .header {
+258:    font-size: 1.8em;
+259:    margin-top: 20px;
+260:  }
+261:
+262:  nav ul {
+263:    flex-direction: column;
+264:    gap: 12px;
+265:    align-items: stretch;
+266:  }
+267:
+268:  .links a {
+269:    display: block;
+270:    width: 100%;
+271:    text-align: center;
+272:  }
+273:
+274:  main {
+275:    padding: 0 12px;
+276:  }
+277:
+278:  /* Ensure profile image isn’t oversized on phones */
+279:  .profile-pic {
+280:    width: 96px;
+281:    height: 96px;
+282:  }
+283:}

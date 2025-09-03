@@ -1,0 +1,103 @@
+1:<!-- I am creating my first official website to host my Youtube videos, Twitch, Games I create, and other stuff  -->
+2:
+3:<!DOCTYPE html>
+4:<html lang="en">
+5:  <head>
+6:    <meta charset="UTF-8" />
+7:    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+8:    <link rel="stylesheet" href="./style.css" />
+9:    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+10:    <meta
+11:      name="description"
+12:      content="TheDirtyMike39's official hub for YouTube, Twitch, games, and community."
+13:    />
+14:    <title>TheDirtyMike39's Hub</title>
+15:  </head>
+16:  <body>
+17:    <a href="#main-content" class="skip-link">Skip to main content</a>
+18:    <div class="spinner" aria-label="Loading" style="display: none"></div>
+19:    <header>
+20:      <h1 class="header">Welcome to TheDirtyMike39's Hub!</h1>
+21:      <img
+22:        src="./Screenshot 2025-09-02 170724.png"
+23:        alt="Profile picture of TheDirtyMike39"
+24:        class="profile-pic"
+25:        width="120"
+26:        height="120"
+27:      />
+28:    </header>
+29:    <nav aria-label="Main navigation">
+30:      <ul>
+31:        <li class="links">
+32:          <a href="https://www.youtube.com/@dirtymike39" aria-label="YouTube">
+33:            <svg
+34:              width="24"
+35:              height="24"
+36:              fill="#fff"
+37:              viewBox="0 0 24 24"
+38:              style="vertical-align: middle; margin-right: 6px"
+39:              role="img"
+40:              aria-label="YouTube logo"
+41:            >
+42:              <path
+43:                d="M23.498 6.186a2.994 2.994 0 0 0-2.112-2.112C19.413 3.5 12 3.5 12 3.5s-7.413 0-9.386.574A2.994 2.994 0 0 0 .502 6.186C0 8.16 0 12 0 12s0 3.84.502 5.814a2.994 2.994 0 0 0 2.112 2.112C4.587 20.5 12 20.5 12 20.5s7.413 0 9.386-.574a2.994 2.994 0 0 0 2.112-2.112C24 15.84 24 12 24 12s0-3.84-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+44:              />
+45:            </svg>
+46:            YouTube
+47:          </a>
+48:        </li>
+49:        <li class="links">
+50:          <a href="https://www.twitch.tv/thedirtymike39">Twitch</a>
+51:        </li>
+52:        <li class="links">
+53:          <a href="https://tiktok.com/@thedirtymike39boi">TikTok</a>
+54:        </li>
+55:        <li class="links">
+56:          <a href="https://thedirtymike39.itch.io/">Games</a>
+57:        </li>
+58:      </ul>
+59:    </nav>
+60:    <main id="main-content">
+61:      <section id="about">
+62:        <h2>About Me</h2>
+63:        <p>
+64:          Hi! I'm TheDirtyMike39. I create content on YouTube, Twitch, TikTok,
+65:          and develop indie games. Welcome to my official hub!
+66:        </p>
+67:      </section>
+68:      <section id="featured">
+69:        <h2>Featured Video</h2>
+70:        <div class="video-container">
+71:          <iframe
+72:            width="560"
+73:            height="315"
+74:            src="https://www.youtube.com/embed/100E81rzPkw"
+75:            title="Featured YouTube Video"
+76:            frameborder="0"
+77:            allowfullscreen
+78:            aria-label="Featured YouTube Video"
+79:          ></iframe>
+80:        </div>
+81:      </section>
+82:      <section id="games">
+83:        <h2>My Games</h2>
+84:        <p>
+85:          Check out my latest games on
+86:          <a href="https://thedirtymike39.itch.io/" target="_blank">Itch.io</a>!
+87:        </p>
+88:      </section>
+89:      <section id="contact">
+90:        <h2>Contact</h2>
+91:        <p>
+92:          Want to reach out? Contact me on email!
+93:          <a href="mailto:thedirtymike39boi@gmail.com"
+94:            >thedirtymike39boi@gmail.com</a
+95:          >
+96:        </p>
+97:      </section>
+98:    </main>
+99:    <footer>
+100:      <p>&copy; 2025 TheDirtyMike39. All rights reserved.</p>
+101:    </footer>
+102:  </body>
+103:</html>

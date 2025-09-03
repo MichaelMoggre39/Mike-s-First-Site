@@ -1,3 +1,10 @@
+/* Global box-sizing for predictable layout */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 /* Skip Link Accessibility Styles */
 .skip-link {
   position: absolute;
@@ -61,6 +68,14 @@
 /* Error handling for images */
 img.profile-pic {
   background: #222;
+}
+
+/* Make media elements shrink to fit on small screens */
+img,
+iframe,
+video {
+  max-width: 100%;
+  height: auto;
 }
 body {
   margin: 0;
@@ -132,10 +147,22 @@ nav {
 }
 
 .video-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+  width: 100%;
+  /* 16:9 aspect ratio */
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
   margin-top: 16px;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
 
 footer {
@@ -223,4 +250,34 @@ main {
 #contact {
   text-align: center;
   margin: 32px auto;
+}
+
+/* Mobile tweaks */
+@media (max-width: 700px) {
+  .header {
+    font-size: 1.8em;
+    margin-top: 20px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+  }
+
+  .links a {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  main {
+    padding: 0 12px;
+  }
+
+  /* Ensure profile image isn’t oversized on phones */
+  .profile-pic {
+    width: 96px;
+    height: 96px;
+  }
 }
